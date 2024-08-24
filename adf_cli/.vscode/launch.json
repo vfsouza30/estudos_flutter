@@ -1,0 +1,47 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Student Find By Id",
+            "request": "launch",
+            "type": "dart",
+            "program": "${workspaceFolder}/bin/adf_cli.dart",
+            "args": [
+                "students",
+                "byId",
+                "-i",
+                "${input:id_student}"
+            ]
+        },
+        {
+            "name": "Student insert",
+            "request": "launch",
+            "type": "dart",
+            "program": "${workspaceFolder}/bin/adf_cli.dart",
+            "args": [
+                "students",
+                "insert",
+                "-f",
+                "${input:file_path}"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "id_student",
+            "description": "Informe o Id do aluno",
+            "default": "",
+            "type": "promptString"
+        },
+        {
+            "id": "file_path",
+            "description": "Informe o arquivo para update",
+            "default": "",
+            "type": "promptString"
+        }
+
+    ]
+}
